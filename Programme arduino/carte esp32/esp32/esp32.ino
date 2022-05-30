@@ -1,6 +1,10 @@
 #include <Arduino.h>
-#include <WiFi.h>
-#include <FirebaseESP32.h>
+#if defined(ESP32)
+  #include <WiFi.h>
+#elif defined(ESP8266)
+  #include <ESP8266WiFi.h>
+#endif
+#include <Firebase_ESP_Client.h>
 
 //Provide the token generation process info.
 #include "addons/TokenHelper.h"
@@ -71,10 +75,9 @@ void writeString(String command) { // Used to serially push out a String with Se
   //delay(200);
 }
 
-
 void setup() {
   //Serial2.begin(9600, SERIAL_8N1, RXp2, TXp2);
-  Serial.begin(115200);
+  Serial.begin(115200, SERIAL_8N1, 16, 17);
   pinMode(2, OUTPUT);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
   //Serial.print("Connecting to Wi-Fi");
@@ -144,44 +147,37 @@ void loop() {
   delay(1000);
 
   // recevoir données de l'Arduino (angles servomoteurs)
-  /*if (Serial.available() && Serial.read() == 'S') {
-      //Serial.println("(ESP32) Received data from Arduino : ");
+  /*if (Serial.available()) {
+      Serial.println("(ESP32) Received data from Arduino : ");
+
+      /*char letter = Serial.read();
+      
+      if(letter == 'S'){
+        int taille = Serial.readBytesUntil('\n', tab_servo_in, 14);
+        
+
+        for(int i=0; i<taille; i++){
+          Serial.print(tab_servo_in[i]);
+          Serial.print(",");
+        }*/
 
 
-        for(int i=0; i<14; i++){
-        digitalWrite(2, 1);
-        
-        int x = Serial.parseInt();
-        switch(i){
-          case 1:
-            Firebase.RTDB.setInt(&fbdo, "/servomoteurs/ServoPince", x);
-            break;
-          case 3:
-            Firebase.RTDB.setInt(&fbdo, "/servomoteurs/ServoRotationPince", x);
-            break;
-          case 5:
-            Firebase.RTDB.setInt(&fbdo, "/servomoteurs/ServoInclinaison", x);
-            break;
-          case 7:
-            Firebase.RTDB.setInt(&fbdo, "/servomoteurs/ServoRotationBras", x);
-            break;
-          case 9:
-            Firebase.RTDB.setInt(&fbdo, "/servomoteurs/ServoTournePince", x);
-            break;
-          case 11:
-            Firebase.RTDB.setInt(&fbdo, "/servomoteurs/ServoBrasPrincipal", x);
-            break;
-        }
-                
-        
-        //Serial.print(x);
-        //Serial.print(",");
-        delay(50);
-        digitalWrite(2, 0);
-      }    
-  }else{*/
-    //Serial.println("no data from Arduino");
-    if (Firebase.ready() && (millis() - sendDataPrevMillis > 750 || sendDataPrevMillis == 0)) {
+        if(Serial.read() == 'S'){
+        //Serial.println("Receive data Servo from Arduino");
+        servomotor();
+    }
+      }*/
+    
+    
+  }/*else{
+    Serial.println("no data from Arduino");
+  }*/
+
+
+
+
+  
+  /*if (Firebase.ready() && (millis() - sendDataPrevMillis > 750 || sendDataPrevMillis == 0)) {
     sendDataPrevMillis = millis();
   
     Firebase.RTDB.getArray(&fbdo, "/commandes/", &jsonArray);
@@ -196,19 +192,19 @@ void loop() {
       temp=cpt;
       cpt = 0;
       del=true;
-      if(del) erase(temp);
       Firebase.RTDB.setInt(&fbdo, "/compteur/", 0);
     }
     else {
+      digitalWrite(2, HIGH);
       delay(50);
       //Serial.println(command);
-      
       writeString(command);
+      digitalWrite(2, LOW);
       //Firebase.RTDB.deleteNode(&fbdo, "/commandes/" + String(cpt));
       cpt++;
     }
-    }
-  //}
+    if(del) erase(temp);
+  }*/
 }
     
 
