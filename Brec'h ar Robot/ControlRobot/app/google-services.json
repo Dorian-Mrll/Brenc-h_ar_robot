@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "540568531605",
+    "firebase_url": "https://esp32-31ba2-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "esp32-31ba2",
+    "storage_bucket": "esp32-31ba2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540568531605:android:77dd381c12efefb7dae19c",
+        "android_client_info": {
+          "package_name": "com.example.controlrobot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "540568531605-3fqk8sjdc1ll8n460evd8sclmhgsjnlq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKmW406w2H553nwnZKOon19KNkzIwflmE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "540568531605-3fqk8sjdc1ll8n460evd8sclmhgsjnlq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

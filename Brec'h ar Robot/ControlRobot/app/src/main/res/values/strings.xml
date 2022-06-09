@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">Brec\'h ar Robot</string>
+    <string name="interaction">Intéraction avec le bras du robot</string>
+    <string name="commandes">Commandes</string>
+    <string name="camera">Caméra</string>
+    <string name="caracteristiques">Caractéristiques</string>
+    <string name="a_propos">A propos</string>
+
+    <string name="title_activity_interaction">InteractionActivity</string>
+    <string name="onglet1">Commandes</string>
+    <string name="onglet2">Caméra</string>
+    <string name="onglet3">Stats</string>
+    <string name="onglet4">A propos</string>
+
+
+    <style name="MyCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">32px</item>
+    </style>
+
+
+    <string name="title3">Gestion de la pince</string>
+    <string name="title4">Gestion du bras</string>
+
+    <string name="tab">tableau</string>
+    <string name="tab_title1">Servomoteur</string>
+    <string name="tab_title2">Degré de l\'angle</string>
+    <string name="servo1">ServoPince</string>
+    <string name="servo2">ServoRotationPince</string>
+    <string name="servo3">ServoInclinaisonPince</string>
+    <string name="servo4">ServoRotationBras</string>
+    <string name="servo5">ServoBras</string>
+    <string name="servo6">ServoBrasAvantBras</string>
+    <string name="servo7">ServoTourneBras</string>
+    <string name="angle1">°</string>
+    <string name="angle2">°</string>
+    <string name="angle3">°</string>
+    <string name="angle4">°</string>
+    <string name="angle5">°</string>
+    <string name="angle6">°</string>
+    <string name="angle7">°</string>
+
+    <string name="reinitialiser">Réinitialiser</string>
+    <string name="quitter">Quitter</string>
+    <string name="servomoteur">Rafraichir données servomoteurs</string>
+
+    <string name="btn_ouvrir">Ouvrir</string>
+    <string name="btn_fermer">Fermer</string>
+    <string name="btn_gauche">Gauche</string>
+    <string name="btn_droite">Droite</string>
+    <string name="btn_monter">Monter</string>
+    <string name="btn_descendre">Descendre</string>
+
+    <string name="btn_gauche2">Gauche</string>
+    <string name="btn_droite2">Droite</string>
+    <string name="btn_lever_avant_bras">Lever\nAvant-bras</string>
+    <string name="btn_descendre_avant_bras">Baisser\nAvant-bras</string>
+    <string name="btn_rotationG">Rotation\nGauche</string>
+    <string name="btn_rotationD">Rotation\nDroite</string>
+    <string name="btn_lever_bras">Lever Bras</string>
+    <string name="btn_descendre_bras">Baisser Bras</string>
+
+    <string name="create_account"><u>Créer nouveau compte</u></string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_main22">Main22Activity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+</resources>
