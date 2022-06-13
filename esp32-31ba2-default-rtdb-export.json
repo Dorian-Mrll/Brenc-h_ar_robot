@@ -1,0 +1,49 @@
+{
+  "Application": {
+    "connection": false,
+    "start": true
+  },
+  "Commandes": {
+    "Bras": {
+      "baisser_avant-bras": false,
+      "baisser_bras": false,
+      "lever_avant-bras": true,
+      "lever_bras": false,
+      "rotation_droite": false,
+      "rotation_gauche": false,
+      "tourne_droite": false,
+      "tourne_gauche": false
+    },
+    "Pince": {
+      "ferme": false,
+      "inclinaison_arriere": false,
+      "inclinaison_avant": false,
+      "ouvre": false,
+      "rotation_droite": false,
+      "rotation_gauche": false
+    },
+    "reinitialiser": false,
+    "servomoteur": false
+  },
+  "ESP32": {
+    "WiFi": false
+  },
+  "Servomoteurs": {
+    "Bras": {
+      "AvantBras": 50,
+      "Bras": 110,
+      "Rotation": 90,
+      "Tourne": 91
+    },
+    "Pince": {
+      "Inclinaison": 4,
+      "Pince": 14,
+      "Rotation": 61
+    }
+  },
+  "Utilisateurs": {
+    "admin": "admin",
+    "admin2": "admin2",
+    "admin3": "admin3"
+  }
+}
