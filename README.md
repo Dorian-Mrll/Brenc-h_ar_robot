@@ -11,3 +11,15 @@ paquet utilisé :
 
 Firebase_ESP32_Client
 ServoESP32-master
+
+
+Carte DFRobot
+
+
+Commande : $X1,X2,X3,X4,X5,X6        min     max
+X1 : Pince                           65      10
+X2 : Rotation de la pince            0       180
+X3 : Inclinaison de la pince         103     5
+X4 : Tourner                         175     10
+X5 : Avant bras                      175     75
+X6 : Bras                            100     10
